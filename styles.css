@@ -1,4 +1,51 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 /* CSS VARIABLES */
 :root{
@@ -32,6 +79,10 @@ header, main, footer{
     background-color: var(--white);
 }
 
+header {
+    font-weight:bold;
+    font-size:xx-large;
+}
 /* Shared header and footer styles */
 header, footer{
     text-align: center;
@@ -42,6 +93,7 @@ header, footer{
 nav{
     width: 50%;
     margin: 0 auto;
+    font-size:large;
 }
 
 nav ul{
@@ -75,8 +127,16 @@ main > section{
 /* Styles for the h2 & h3 tags */
 h2, h3{
     text-align: center;
+    font-weight:bold;
 }
 
+h2 {
+    font-size:x-larger;
+}
+
+h3 {
+    font-size:large;
+}
 /* Paragraph Styles */
 p{
     max-width: 65ch;
@@ -144,6 +204,7 @@ fieldset{
 }
 
 /* Code for Custom Radios - Compare to Your zyBook, I added additional code to make these match my form styles */
+
 input[type=radio] + label {
     cursor: pointer;
     display: flex;
@@ -153,10 +214,10 @@ input[type=radio] + label {
 input[type=radio] {
     appearance: none;
     margin: 0;
-    padding: 0;
-    border: none;
-    font-size: 0;
-    border-radius: 0;
+	padding: 0;
+	font-size: 0;
+	border-radius: 0;
+    height: 0;
 }
 
 input[type=radio] + label::before {
